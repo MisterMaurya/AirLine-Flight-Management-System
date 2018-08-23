@@ -1,18 +1,19 @@
 package com.airlines.entity;
 
-import java.util.Date;
-
 public class User {
 	private int userId;
 	private String userName;
 	private String email;
 	private String password;
 	private String fullName;
-	private int age;
-	private Date dob;
+	private String dob;
 	private String address;
 	private String contact;
 	private String gender;
+	private String userRole;
+	private String status;
+	private String otp;
+	private String otpTime;
 
 	public int getUserId() {
 		return userId;
@@ -54,19 +55,11 @@ public class User {
 		this.fullName = fullName;
 	}
 
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public Date getDob() {
+	public String getDob() {
 		return dob;
 	}
 
-	public void setDob(Date dob) {
+	public void setDob(String dob) {
 		this.dob = dob;
 	}
 
@@ -93,6 +86,43 @@ public class User {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+
+	public String getUserRole() {
+		return userRole;
+	}
+
+	public void setUserRole(String userRole) {
+		this.userRole = userRole;
+	}
 	
-	
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getOtp() {
+		return otp;
+	}
+
+	public void setOtp(String otp) {
+		this.otp = otp;
+	}
+
+	public String getOtpTime() {
+		return otpTime;
+	}
+
+	public void setOtpTime(String otpTime) {
+		this.otpTime = otpTime;
+	}
+
+	@Override
+	public String toString() {
+		return "User [userName=" + userName + ", email=" + email + ", password=" + password + ", fullName=" + fullName
+				+ ", dob=" + dob + ", address=" + address + ", contact=" + contact + ", gender=" + gender + "]";
+	}
+
 }

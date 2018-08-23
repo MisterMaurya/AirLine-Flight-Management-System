@@ -5,7 +5,7 @@ import java.util.List;
 import com.airlines.entity.User;
 
 public interface UserDAO {
-	public User saveUser(User user);
+	public boolean saveUser(User user);
 
 	public boolean deleteUser(User user);
 
@@ -14,5 +14,9 @@ public interface UserDAO {
 	public User getUserByUserName(String userName);
 
 	public User getUserByEmail(String email);
+
+	public boolean updateUser(User user) throws Exception;
+
+	public boolean validateOTP(String email,String code) throws Exception;
 
 }
