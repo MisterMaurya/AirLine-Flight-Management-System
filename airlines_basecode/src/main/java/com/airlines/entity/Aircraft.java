@@ -5,6 +5,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Aircraft {
+	
 	@Id
 	private String aircraftId;
 	private String aircraftName;
