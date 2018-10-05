@@ -16,6 +16,7 @@ public class Aircraft {
 
 	public String getAircraftId() {
 		return aircraftId;
+		
 	}
 
 	public void setAircraftId(String aircraftId) {
