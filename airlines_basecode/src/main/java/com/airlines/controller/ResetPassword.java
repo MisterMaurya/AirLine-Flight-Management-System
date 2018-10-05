@@ -2,7 +2,7 @@ package com.airlines.controller;
 
 import java.sql.SQLException;
 
-import com.airlines.model.DBConnect;
+import com.airlines.util.DBConnect;
 import com.mysql.jdbc.PreparedStatement;
 
 

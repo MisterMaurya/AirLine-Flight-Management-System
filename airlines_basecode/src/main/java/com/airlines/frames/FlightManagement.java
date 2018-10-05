@@ -2,7 +2,6 @@ package com.airlines.frames;
 
 import java.awt.Color;
 import java.awt.Cursor;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Insets;
 import java.awt.event.MouseAdapter;
@@ -20,22 +19,15 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.SpinnerDateModel;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.border.Border;
-import javax.swing.border.LineBorder;
-import javax.swing.plaf.basic.BasicComboBoxUI;
-import javax.swing.plaf.basic.BasicComboPopup;
-import javax.swing.plaf.basic.BasicScrollBarUI;
-import javax.swing.plaf.basic.ComboPopup;
 
 import org.jdesktop.swingx.JXDatePicker;
 
@@ -44,7 +36,7 @@ import com.airlines.dao.impl.AircarftDAOImpl;
 import com.airlines.dao.impl.FlightDAOImpl;
 import com.airlines.entity.Aircraft;
 import com.airlines.entity.Flight;
-import com.airlines.model.ComboBoxUI;
+import com.airlines.util.ComboBoxUI;
 
 public class FlightManagement {
 
@@ -125,10 +117,9 @@ public class FlightManagement {
 		departT.setFont(new Font("courier", Font.PLAIN, 25));
 		panelL.add(departT);
 
-	
-		JSpinner departTF = new JSpinner( new SpinnerDateModel() );
+		JSpinner departTF = new JSpinner(new SpinnerDateModel());
 		JSpinner.DateEditor timeEditor = new JSpinner.DateEditor(departTF, "HH:mm:ss");
-	
+
 		departTF.setEditor(timeEditor);
 		departTF.setValue(new Date());
 		departTF.setBounds(200, 210, 280, 50);
@@ -139,8 +130,7 @@ public class FlightManagement {
 		JButton arrowBtn = (JButton) departTF.getComponent(1);
 		arrowBtn.setBackground(Color.BLACK);
 		arrowBtn.setOpaque(false);
-		
-		
+
 		panelL.add(departTF);
 
 		JLabel arrivalTL = new JLabel("<html>Arrival Time<font color=red>*</font><html>");
@@ -190,7 +180,7 @@ public class FlightManagement {
 		aircraftN.setFont(new Font("courier", Font.PLAIN, 25));
 		panelL.add(aircraftN);
 
-		final JComboBox<String> aircraft = items();
+		JComboBox<String> aircraft = items();
 		aircraft.setBounds(660, 280, 300, 50);
 		panelL.add(aircraft);
 
@@ -227,7 +217,6 @@ public class FlightManagement {
 						fromTF.setText(null);
 						toTF.setText(null);
 						arrivalTF.setText(null);
-						
 
 					} else {
 						msg.setText("Something went wrong");
@@ -293,8 +282,9 @@ public class FlightManagement {
 	@SuppressWarnings("unchecked")
 	private static JComboBox<String> items() {
 
-		JComboBox<String> comboBox = new JComboBox<String>();
-
+		System.out.println("Hit");
+		JComboBox<String> comboBox = null;
+		comboBox = new JComboBox<String>();
 		comboBox.setBounds(200, 130, 280, 50);
 		comboBox = ComboBoxUI.comboUI(comboBox);
 		comboBox.setFont(new Font("courier", Font.PLAIN, 22));
@@ -302,6 +292,7 @@ public class FlightManagement {
 		final List<Aircraft> craftList = craft.getAllCarft();
 		for (Aircraft list : craftList) {
 			comboBox.addItem("  " + list.getAircraftName());
+			System.out.println(list.getAircraftName());
 		}
 		return comboBox;
 	}

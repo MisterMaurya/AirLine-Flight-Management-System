@@ -33,7 +33,7 @@ import org.jdesktop.swingx.JXDatePicker;
 
 import com.airlines.dao.impl.FlightDAOImpl;
 import com.airlines.entity.Flight;
-import com.airlines.model.ComboBoxUI;
+import com.airlines.util.ComboBoxUI;
 
 public class UserWelcome {
 	public static JFrame frame;

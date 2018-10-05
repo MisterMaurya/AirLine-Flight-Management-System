@@ -11,7 +11,7 @@ import com.airlines.frames.AdminWelcome;
 import com.airlines.frames.Login;
 import com.airlines.frames.UserWelcome;
 import com.airlines.frames.ValidateOTP;
-import com.airlines.model.DBConnect;
+import com.airlines.util.DBConnect;
 
 public class AdminUserLogin {
 

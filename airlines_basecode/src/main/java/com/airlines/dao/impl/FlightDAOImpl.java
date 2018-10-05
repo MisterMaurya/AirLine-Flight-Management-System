@@ -9,7 +9,7 @@ import org.hibernate.Session;
 
 import com.airlines.dao.api.FlightDAO;
 import com.airlines.entity.Flight;
-import com.airlines.model.ConnectWithHibernate;
+import com.airlines.util.ConnectWithHibernate;
 
 public class FlightDAOImpl implements FlightDAO {
 

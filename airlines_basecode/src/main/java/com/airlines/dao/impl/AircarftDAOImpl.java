@@ -7,7 +7,7 @@ import org.hibernate.Session;
 
 import com.airlines.dao.api.AircraftDAO;
 import com.airlines.entity.Aircraft;
-import com.airlines.model.ConnectWithHibernate;
+import com.airlines.util.ConnectWithHibernate;
 
 public class AircarftDAOImpl implements AircraftDAO {
 	Session session = null;

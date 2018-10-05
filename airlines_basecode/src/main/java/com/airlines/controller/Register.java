@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 import com.airlines.dao.impl.UserDAOImpl;
 import com.airlines.entity.User;
 import com.airlines.frames.Registration;
-import com.airlines.model.DBConnect;
+import com.airlines.util.DBConnect;
 
 public class Register {
 	static ResultSet rs = null;

@@ -21,7 +21,7 @@ import com.airlines.controller.Register;
 import com.airlines.dao.api.UserDAO;
 import com.airlines.entity.User;
 import com.airlines.frames.ValidateOTP;
-import com.airlines.model.DBConnect;
+import com.airlines.util.DBConnect;
 
 public class UserDAOImpl implements UserDAO {
 	private static ResultSet rs = null;
