@@ -11,8 +11,8 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class OTP {
-	private final static String from = "zainnormalik@gmail.com";
-	private final static String password = "45\\C{x}P;3";
+	private final static String from = "abc@gmail.com";
+	private final static String password = "xyz123";
 	private static final String host = "smtp.googlemail.com";
 
 	public static void mailAPI(String email, String msg) {
