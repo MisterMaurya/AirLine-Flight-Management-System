@@ -23,6 +23,7 @@ public class OTP {
 		props.put("mail.smtp.starttls.enable", "true");
 
 		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
+			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
 				return new PasswordAuthentication(from, password);
 			}
